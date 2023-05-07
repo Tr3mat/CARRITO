@@ -361,3 +361,86 @@ th td {
     border: 0;
     color: #DFDDE0;
 }
+
+@media (max-width: 991px){
+    .menu {
+        padding: 30px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .header-content{
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 130px;
+    }
+    .header-content h1 {
+        font-size: 40px;
+    }
+
+    .header-content p {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .botons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-1{
+        margin: 0 0 20px 0;
+    }
+    .socials-1 {
+        display: none;
+    }
+    .socials-2{
+        display: none;
+    }
+    .recetas {
+        flex-direction: column;
+        padding: 0px 30px;
+        text-align: center;
+    }
+    .recetas-1{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .recetas-2{
+        width: 100%;
+    }
+    .footer{
+        padding: 30px;
+    }
+    .links{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .link {
+        width: 70%;
+    }
+    .link p {
+        margin: 0 0 25px 0;
+    }
+    .socials-2 { 
+        margin-bottom: 15px;
+    }
+}
