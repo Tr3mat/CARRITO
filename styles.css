@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,700;1,400&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #252326;
+}
+
+/* .contaier {
+    min-width: 900px;
+    margin: 0 auto;
+    width: 90%;
+} */
+
+
+.header {
+    min-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 90%;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFF;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: gray;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito { 
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4B5076;
+    padding: 20px;
+    min-width: 400px;
+    min-width: 400px;
+}
+
+table{
+    width: 100%;
+}
+
+th td {
+    color: #FFF
+}
+
+.borrar {
+    background-color: coral;
+    border-radius: 50%;
+    padding:  5px 10px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 800;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.header-content h1 {
+    font-size: 70px;
+    color: #FFF;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.header-content p {
+    font-size: 18px;
+    padding: 0 200px;
+    color: #8B7E7B;
+    margin-bottom: 80px;
+}
+
+.botons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-1 {
+    display: inline-block;
+    width: 200px;
+    margin: 0 10px;
+    padding:  13px 0;
+    border-radius: 25px;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: coral;
+}
+
+.btn-1:hover {
+    background-color: orange;
+}
+.socials-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+}
+
+.socials-1 img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 150px;
+}
+
+.recetas {
+    display: flex;
+    padding: 120px 0;
+}
+
+.recetas-1 {
+    width: 50%;
+}
+
+.recetas-1 h3 {
+    font-size: 18px;
+    color: #FFF;
+}
+
+.recetas-1 p {
+    color: coral;
+}
+
+.recetas-1 hr {
+    margin: 10px 0;
+    border: 1px solid #312F32;
+}
+
+.recetas-2 {
+    width: 50%;
+    text-align: center;
+}
+
+.recetas-2 h2 {
+    font-size: 55px;
+    line-height: 55px;
+    color: #FFF;
+}   
+
+.platillos {
+    padding: 50px 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.swiper-button-prev:after {
+    font-size: 25px;
+}
+
+.swiper-button-next:after {
+    font-size: 25px;
+}
+
+.swiper-button-prev {
+    color: coral
+}
+.swiper-button-next {
+    color: coral;
+}
+
+.swiper-pagination-bullet {
+    background-color: #FFF;
+    opacity: 1;
+    top: 50px;
+}
+
+.swiper-pagination-bullet-active { 
+    background-color: coral;
+}
+
+.platillo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.platillo h3 {
+    font-size: 16px;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    color: coral !important;
+}
+
+.platillo img {
+    width: 200px;
+}
+
+.platillo p {
+    font-size: 16px;
+    color: #FFF;
+    margin-top: 15px;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: coral;
+    color: #FFF;
+    font-size: 14px;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+
+.btn-2:hover {
+    background-color: orange;
+}
+
+.c1, .c2 {
+    color: #8B7E7B !important;
+}
+
+.btn-3 {
+    display: inline-block;
+    color: #FFF;
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin-top: 25px;
+    border: 1px solid #DFDDE0;
+}
+
+.btn-3:hover {
+    background-color: coral;
+    border: 1px solid coral;
+}
+
+.footer {
+    padding-bottom: 50px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    width: 25%;
+}
+
+.link h3 {
+    font-size: 20px;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+.link p {
+    color: #8B7E7B;
+    font-size: 14px;
+    margin:  0 50px 15px 0;
+}
+
+.link ul li a {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.socials-2 img {
+    width: 20px;
+    height: 20px;
+}
+
+.link form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inp {
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btn-4 {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: #61BC00;
+    border: 0;
+    color: #DFDDE0;
+}
