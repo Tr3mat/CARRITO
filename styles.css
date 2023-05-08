@@ -13,19 +13,15 @@ body {
     background-color: #252326;
 }
 
-/* .contaier {
-    min-width: 900px;
+.container {
+    min-width: 1200px;
     margin: 0 auto;
-    width: 90%;
-} */
+}
 
 
 .header {
-    min-width: 900px;
-    margin: 0 auto;
     display: flex;
     position: relative;
-    width: 90%;
 }
 
 .menu {
@@ -92,7 +88,7 @@ body {
     z-index: 1;
     background-color: #4E4B5076;
     padding: 20px;
-    min-width: 400px;
+    min-height: 400px;
     min-width: 400px;
 }
 
@@ -100,8 +96,12 @@ table{
     width: 100%;
 }
 
-th td {
+th {
     color: #FFF
+}
+
+td {
+    color: #FFF;
 }
 
 .borrar {
@@ -152,8 +152,9 @@ th td {
 .btn-1:hover {
     background-color: orange;
 }
+
 .socials-1 {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     top: 0;
