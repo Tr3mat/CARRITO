@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="gallery-container">
+            <img src="imagenes/4e2ae95cbad49cd9463cf7b0b983979b.jpg" alt="gato" class="gallery-item gallery-item-1"
+                title="un gato" data-index="1">
+
+            <img src="imagenes/descarga (1).jpg" alt="perro" class="gallery-item gallery-item-2" title="perrodogo"
+                data-index="2">
+
+            <img src="imagenes/images.jpg" alt="gatoTriste" class="gallery-item gallery-item-3" title="gatoTriste"
+                data-index="3">
+
+            <img src="imagenes/descarga.jpg" alt="" class="gallery-item gallery-item-4" data-index="4">
+
+            <img src="imagenes/avatars-000886867102-xp7u81-t240x240.jpg" alt="" class="gallery-item gallery-item-5"
+                data-index="5">
+        </div>
+        <div class="gallery-controls"></div>
+
+        <script>
+            const galleryContainer = document.querySelector('.gallery-container');
+            const galleryControlsContainer = document.querySelector('.gallery-controls');
+            const galleryControls = ['previous', 'next'];
+            const galleryItems = document.querySelectorAll('.gallery-item')
+
+            class Carousel {
+
+                constructor(container, items, controls) {
+                    this.carouselContainer = container;
+                    this.carouselControls = controls;
+                    this.carouselArray = [...items];
+                }
+
+                updateGallery() {
+                    this.carouselArray.forEach(el => {
+                        el.classList.remove('gallery-item-1');
+                        el.classList.remove('gallery-item-2');
+                        el.classList.remove('gallery-item-3');
+                        el.classList.remove('gallery-item-4');
+                        el.classList.remove('gallery-item-5');
+                    });
+
+                    this.carouselArray.slice(0, 5).forEach((el, i) => {
+                        el.classList.add(`gallery-item-${i + 1}`);
+                    });
+
+                }
+
+                setCurrentState(direction) {
+                    if (direction.className == 'gallery-controls-previous') {
+                        this.carouselArray.unshift(this.carouselArray.pop());
+                    } else {
+                        this.carouselArray.push(this.carouselArray.shift());
+                    }
+                    this.updateGallery();
+                }
+
+                setControls() {
+                    this.carouselControls.forEach(control => {
+                        galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
+                        document.querySelector(`.gallery-controls-${control}`).innerText = control;
+                    });
+                }
+
+                useControls() {
+                    const triggers = [...galleryControlsContainer.childNodes];
+                    triggers.forEach(control => {
+                        control.addEventListener('click', e => {
+                            e.preventDefault();
+                            this.setCurrentState(control);
+                        })
+                    })
+                }
+            }
+
+            const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+
+            exampleCarousel.setControls();
+            exampleCarousel.useControls();
+
+
+        </script>
+
+
+</body>
+
+
+
+
+</html>
